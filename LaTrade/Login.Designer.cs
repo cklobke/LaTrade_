@@ -20,6 +20,7 @@
             base.Dispose(disposing);
         }
 
+
         #region Vom Windows Form-Designer generierter Code
 
         /// <summary>
@@ -29,148 +30,216 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.tbPasswort = new System.Windows.Forms.TextBox();
-            this.cbUsers = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblRegister = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
             this.dataSet1 = new System.Data.DataSet();
-            this.cbShowPasswort = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pnlWeiter = new System.Windows.Forms.Panel();
+            this.lblWeiter = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.eventLog1 = new System.Diagnostics.EventLog();
+            this.pnlNutzer = new System.Windows.Forms.Panel();
+            this.lblNutzer = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.tbNutzer = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pnlWeiter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
+            this.pnlNutzer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 17);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(46, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(232, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Willkommen bei LaTrade!";
             // 
-            // btnLogin
-            // 
-            this.btnLogin.Font = new System.Drawing.Font("Bahnschrift Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(74, 266);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(127, 31);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Anmelden";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
             // tbPasswort
             // 
+            this.tbPasswort.Enabled = false;
             this.tbPasswort.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPasswort.Location = new System.Drawing.Point(46, 195);
+            this.tbPasswort.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.tbPasswort.Location = new System.Drawing.Point(46, 59);
             this.tbPasswort.Name = "tbPasswort";
-            this.tbPasswort.Size = new System.Drawing.Size(189, 27);
+            this.tbPasswort.Size = new System.Drawing.Size(227, 27);
             this.tbPasswort.TabIndex = 2;
-            this.tbPasswort.UseSystemPasswordChar = true;
+            this.tbPasswort.Text = "Passwort";
+            this.tbPasswort.Visible = false;
             this.tbPasswort.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPasswort_KeyDown);
-            // 
-            // cbUsers
-            // 
-            this.cbUsers.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbUsers.FormattingEnabled = true;
-            this.cbUsers.Location = new System.Drawing.Point(45, 109);
-            this.cbUsers.Name = "cbUsers";
-            this.cbUsers.Size = new System.Drawing.Size(189, 27);
-            this.cbUsers.TabIndex = 1;
-            this.cbUsers.SelectedIndexChanged += new System.EventHandler(this.cbUsers_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(236, 19);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Bitte wählen Sie einen Benutzer";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(41, 160);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(200, 19);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Geben Sie Ihr Passwort ein";
-            // 
-            // lblRegister
-            // 
-            this.lblRegister.AutoSize = true;
-            this.lblRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblRegister.Font = new System.Drawing.Font("Bahnschrift Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegister.Location = new System.Drawing.Point(78, 353);
-            this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(120, 17);
-            this.lblRegister.TabIndex = 5;
-            this.lblRegister.Text = "Benutzer anlegen";
-            this.lblRegister.Click += new System.EventHandler(this.lblRegister_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Font = new System.Drawing.Font("Bahnschrift Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(74, 308);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(127, 31);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.Text = "Beenden";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.tbPasswort.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbPasswort_KeyUp);
             // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "NewDataSet";
             // 
-            // cbShowPasswort
-            // 
-            this.cbShowPasswort.AutoSize = true;
-            this.cbShowPasswort.Location = new System.Drawing.Point(202, 233);
-            this.cbShowPasswort.Name = "cbShowPasswort";
-            this.cbShowPasswort.Size = new System.Drawing.Size(15, 14);
-            this.cbShowPasswort.TabIndex = 21;
-            this.cbShowPasswort.UseVisualStyleBackColor = true;
-            this.cbShowPasswort.CheckedChanged += new System.EventHandler(this.cbShowPasswort_CheckedChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(68, 230);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 17);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Passwort anzeigen";
-            // 
             // backgroundWorker1
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(-3, -5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(344, 49);
+            this.panel1.TabIndex = 22;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::LaTrade.Properties.Resources.icons8_winkel_links_50;
+            this.pictureBox4.Location = new System.Drawing.Point(10, 14);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 29;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Visible = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
+            this.pictureBox4.MouseHover += new System.EventHandler(this.pictureBox4_MouseHover);
+            // 
+            // pnlWeiter
+            // 
+            this.pnlWeiter.Controls.Add(this.lblWeiter);
+            this.pnlWeiter.Controls.Add(this.pictureBox2);
+            this.pnlWeiter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlWeiter.Location = new System.Drawing.Point(46, 92);
+            this.pnlWeiter.Name = "pnlWeiter";
+            this.pnlWeiter.Size = new System.Drawing.Size(227, 33);
+            this.pnlWeiter.TabIndex = 25;
+            this.pnlWeiter.Click += new System.EventHandler(this.pnlWeiter_Click);
+            this.pnlWeiter.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.pnlWeiter.MouseLeave += new System.EventHandler(this.panel3_MouseLeave);
+            this.pnlWeiter.MouseHover += new System.EventHandler(this.panel3_MouseHover);
+            // 
+            // lblWeiter
+            // 
+            this.lblWeiter.AutoSize = true;
+            this.lblWeiter.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeiter.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblWeiter.Location = new System.Drawing.Point(9, 6);
+            this.lblWeiter.Name = "lblWeiter";
+            this.lblWeiter.Size = new System.Drawing.Size(56, 19);
+            this.lblWeiter.TabIndex = 28;
+            this.lblWeiter.Text = "Weiter";
+            this.lblWeiter.Click += new System.EventHandler(this.lblWeiter_Click);
+            this.lblWeiter.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
+            this.lblWeiter.MouseHover += new System.EventHandler(this.label2_MouseHover);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::LaTrade.Properties.Resources.icons8_winkel_rechts_50;
+            this.pictureBox2.Location = new System.Drawing.Point(189, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 26;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            // 
+            // eventLog1
+            // 
+            this.eventLog1.SynchronizingObject = this;
+            // 
+            // pnlNutzer
+            // 
+            this.pnlNutzer.Controls.Add(this.lblNutzer);
+            this.pnlNutzer.Controls.Add(this.pictureBox3);
+            this.pnlNutzer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pnlNutzer.Location = new System.Drawing.Point(46, 131);
+            this.pnlNutzer.Name = "pnlNutzer";
+            this.pnlNutzer.Size = new System.Drawing.Size(228, 33);
+            this.pnlNutzer.TabIndex = 27;
+            this.pnlNutzer.Click += new System.EventHandler(this.pnlNutzer_Click);
+            this.pnlNutzer.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            this.pnlNutzer.MouseLeave += new System.EventHandler(this.panel4_MouseLeave);
+            this.pnlNutzer.MouseHover += new System.EventHandler(this.panel4_MouseHover);
+            // 
+            // lblNutzer
+            // 
+            this.lblNutzer.AutoSize = true;
+            this.lblNutzer.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNutzer.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNutzer.Location = new System.Drawing.Point(9, 6);
+            this.lblNutzer.Name = "lblNutzer";
+            this.lblNutzer.Size = new System.Drawing.Size(137, 19);
+            this.lblNutzer.TabIndex = 29;
+            this.lblNutzer.Text = "Benutzer anlegen";
+            this.lblNutzer.Click += new System.EventHandler(this.lblNutzer_Click);
+            this.lblNutzer.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
+            this.lblNutzer.MouseHover += new System.EventHandler(this.label3_MouseHover);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::LaTrade.Properties.Resources.icons8_benutzer_50;
+            this.pictureBox3.Location = new System.Drawing.Point(189, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 26;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
+            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
+            // 
+            // tbNutzer
+            // 
+            this.tbNutzer.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNutzer.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.tbNutzer.Location = new System.Drawing.Point(45, 59);
+            this.tbNutzer.Name = "tbNutzer";
+            this.tbNutzer.Size = new System.Drawing.Size(228, 27);
+            this.tbNutzer.TabIndex = 28;
+            this.tbNutzer.Text = "Benutzer";
+            this.tbNutzer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbNutzer_KeyDown);
+            this.tbNutzer.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbNutzer_KeyUp);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::LaTrade.Properties.Resources.icons8_sichtbar_50;
+            this.pictureBox1.Location = new System.Drawing.Point(279, 59);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(4F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(302, 379);
-            this.Controls.Add(this.cbShowPasswort);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.lblRegister);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbUsers);
+            this.ClientSize = new System.Drawing.Size(313, 179);
+            this.Controls.Add(this.tbNutzer);
+            this.Controls.Add(this.pnlNutzer);
+            this.Controls.Add(this.pnlWeiter);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.tbPasswort);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Bahnschrift Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Login";
@@ -178,6 +247,17 @@
             this.Text = "LaTrade - Login";
             this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.pnlWeiter.ResumeLayout(false);
+            this.pnlWeiter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
+            this.pnlNutzer.ResumeLayout(false);
+            this.pnlNutzer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,17 +266,20 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox tbPasswort;
-        private System.Windows.Forms.ComboBox cbUsers;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblRegister;
-        private System.Windows.Forms.Button btnExit;
         private System.Data.DataSet dataSet1;
-        private System.Windows.Forms.CheckBox cbShowPasswort;
-        private System.Windows.Forms.Label label4;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel pnlWeiter;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Diagnostics.EventLog eventLog1;
+        private System.Windows.Forms.Panel pnlNutzer;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lblWeiter;
+        private System.Windows.Forms.Label lblNutzer;
+        private System.Windows.Forms.TextBox tbNutzer;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 

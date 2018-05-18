@@ -70,8 +70,8 @@ namespace LoginForm
                 int recht = 3;
                 string encpass = AESCrypt.Encrypt(tbPasswort.Text);
 
-                string query = "INSERT INTO USER (`USER_KURZ` ,`USER_VORNAME` ,`USER_NACHNAME` ,`USER_RECHTEGRUPPE` ,`USER_PASSWORT`) " +
-                "VALUES('" + kurz + "','" + vorname + "','" + nachname + "'," + recht + ",'" + encpass + "')";
+                string query = "INSERT INTO USER (`USER_KURZ` ,`USER_VORNAME` ,`USER_NACHNAME` ,`USER_RECHTEGRUPPE` ,`USER_PASSWORT`, `USER_NUTZERNAME`) " +
+                "VALUES('" + kurz + "','" + vorname + "','" + nachname + "'," + recht + ",'" + encpass + "','" + tbNutzername.Text + "')";
                 MySqlCommand command = new MySqlCommand(query, connection);
 
                 command.ExecuteNonQuery();
@@ -122,6 +122,11 @@ namespace LoginForm
             {
                 DoRegister();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(AESCrypt.Decrypt("TmjXITG9G6WKArYhgoM4mA=="));
         }
     }
 }
