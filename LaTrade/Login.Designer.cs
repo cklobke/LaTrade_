@@ -159,7 +159,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(4F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(276, 379);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(302, 379);
             this.Controls.Add(this.cbShowPasswort);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnExit);

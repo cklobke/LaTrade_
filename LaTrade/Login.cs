@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Windows;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
@@ -96,6 +97,7 @@ namespace LoginForm
         private void Login_Load(object sender, EventArgs e)
         {
             RefreshData();
+            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#497BB4");
         }
 
         private void cbShowPasswort_CheckedChanged(object sender, EventArgs e)
