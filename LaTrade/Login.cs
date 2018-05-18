@@ -149,7 +149,7 @@ namespace LoginForm
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            panel1.BackColor = System.Drawing.ColorTranslator.FromHtml("#5F5395");
+            panel1.BackColor = System.Drawing.ColorTranslator.FromHtml("#536995");
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -394,12 +394,16 @@ namespace LoginForm
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             LoginStep = 1;
-            tbPasswort.Text = "";
             tbPasswort.Enabled = false;
             tbPasswort.Visible = false;
             tbNutzer.Enabled = true;
             tbNutzer.Visible = true;
             lblWeiter.Text = "Weiter";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
