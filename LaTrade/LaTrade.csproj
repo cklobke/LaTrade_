@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AESCrypt.cs" />
+    <Compile Include="IniFile.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
@@ -124,6 +125,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Icons\icons8-winkel-links-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-benutzer-menü-männlich-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-benutzer-menü-männlich-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-bestellung-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-versendet-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-lagerhaus-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-menü-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-sperren-2-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

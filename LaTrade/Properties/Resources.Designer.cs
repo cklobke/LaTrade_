@@ -73,6 +73,66 @@ namespace LaTrade.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_benutzer_501 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-benutzer-501", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_benutzer_menü_männlich_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-benutzer-menü-männlich-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_benutzer_menü_männlich_filled_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-benutzer-menü-männlich-filled-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_bestellung_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-bestellung-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_lagerhaus_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-lagerhaus-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_menü_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-menü-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_sichtbar_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-sichtbar-50", resourceCulture);
@@ -86,6 +146,26 @@ namespace LaTrade.Properties {
         internal static System.Drawing.Bitmap icons8_sichtbar_filled_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-sichtbar-filled-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sperren_2_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sperren-2-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_versendet_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-versendet-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

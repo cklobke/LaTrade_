@@ -13,6 +13,7 @@ using MySql.Data.MySqlClient;
 using MySql.Web;
 using AesEncDenc;
 using System.IO;
+using IniUnit;
 
 namespace LoginForm
 {
@@ -23,6 +24,8 @@ namespace LoginForm
         String EncryptedUserPasswort;
         MySqlConnection dbconnection;
         int LoginStep;
+        bool savedPasswort;
+        IniFile LoginIni;
 
 
         public Login()
@@ -97,6 +100,10 @@ namespace LoginForm
         {
             if (getUserPasswort() == AESCrypt.Encrypt(tbPasswort.Text))
             {
+                LoginIni.Write("Username", tbNutzer.Text);
+                if (savedPasswort) {
+                    LoginIni.Write("Passwort", AESCrypt.Encrypt(tbPasswort.Text));
+                }
                 Main Main = new Main(this);
                 Main.Owner = this;
                 Main.Show();
@@ -128,6 +135,26 @@ namespace LoginForm
             tbNutzer.BackColor = System.Drawing.ColorTranslator.FromHtml("#4d80d1");
             tbPasswort.BackColor = System.Drawing.ColorTranslator.FromHtml("#4d80d1");
             this.BackColor = System.Drawing.ColorTranslator.FromHtml("#497BB4");
+
+            LoginIni = new IniFile("Login.ini");
+            savedPasswort = (LoginIni.Read("Passwort").Length > 0);
+            if (savedPasswort)
+            {
+                pictureBox5.Load("icons/icons8-sperren-2-filled-50.png");
+            }
+            tbNutzer.Text = LoginIni.Read("Username");
+            tbPasswort.Text = AESCrypt.Decrypt(LoginIni.Read("Passwort"));
+            if (tbNutzer.Text == null | tbNutzer.Text == "") {
+                tbNutzer.Text = "Benutzer";
+            }
+            if (tbPasswort.Text == null | tbPasswort.Text == "")
+            {
+                tbPasswort.Text = "Passwort";
+            }
+            if (tbPasswort.Text != "Passwort")
+            {
+                tbPasswort.UseSystemPasswordChar = true;
+            }
         }
 
         private void cbShowPasswort_CheckedChanged(object sender, EventArgs e)
@@ -263,6 +290,7 @@ namespace LoginForm
                     pictureBox1.Visible = true;
                     lblWeiter.Text = "Anmelden";
                     pictureBox4.Visible = true;
+                    pictureBox5.Visible = true;
                     LoginStep = 2;
                 }
                 else
@@ -398,12 +426,40 @@ namespace LoginForm
             tbPasswort.Visible = false;
             tbNutzer.Enabled = true;
             tbNutzer.Visible = true;
+            pictureBox5.Visible = false;
             lblWeiter.Text = "Weiter";
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox5_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox5.Load("icons/icons8-sperren-2-filled-50.png");
+        }
+
+        private void pictureBox5_MouseLeave(object sender, EventArgs e)
+        {
+            if (!savedPasswort) {
+                pictureBox5.Load("icons/icons8-sperren-2-50.png");
+            }
+            
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            if (savedPasswort)
+            {
+                savedPasswort = false;
+                pictureBox5.Load("icons/icons8-sperren-2-50.png");
+            }
+            else {
+                savedPasswort = true;
+                pictureBox5.Load("icons/icons8-sperren-2-filled-50.png");
+            }
+            
         }
     }
 }
