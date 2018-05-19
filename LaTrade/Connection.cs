@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 using MySql.Web;
 
-namespace LoginForm
+namespace LaTrade
 {
     class Connection
     {

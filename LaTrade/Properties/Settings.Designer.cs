@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LoginForm.Properties
+namespace LaTrade.Properties
 {
 
 

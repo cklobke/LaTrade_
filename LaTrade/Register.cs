@@ -11,9 +11,9 @@ using AesEncDenc;
 using System.IO;
 using MySql.Data.MySqlClient;
 using MySql.Web;
-using LoginForm;
+using LaTrade;
 
-namespace LoginForm
+namespace LaTrade
 {
     public partial class Register : Form
     {

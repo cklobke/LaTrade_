@@ -51,8 +51,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AESCrypt.cs" />
+    <Compile Include="Auftraege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auftraege.Designer.cs">
+      <DependentUpon>Auftraege.cs</DependentUpon>
+    </Compile>
     <Compile Include="IniFile.cs" />
     <Compile Include="Connection.cs" />
+    <Compile Include="LTForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LTForm.Designer.cs">
+      <DependentUpon>LTForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,22 +90,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Auftraege.resx">
+      <DependentUpon>Auftraege.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LTForm.resx">
+      <DependentUpon>LTForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +164,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Icons\icons8-sperren-2-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-rechnung-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icon_lang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\Bildschirmfoto 2018-05-19 um 15.37.47.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\logo_lang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-benutzer-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-lagerhaus-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-lebensmittel-liefern-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-liste-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-liste-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-menü-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-personal-video-recorder-menü-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-personal-video-recorder-menü-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-pfeil_-einklappen-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-rechnung-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-sichtbar-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-sichtbar-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-sperren-2-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-versendet-filled-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-einstellungen-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-design-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-drucken-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Icons\icons8-hilfe-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

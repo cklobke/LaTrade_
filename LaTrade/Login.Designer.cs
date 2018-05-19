@@ -1,4 +1,4 @@
-﻿namespace LoginForm
+﻿namespace LaTrade
 {
     partial class Login
     {
@@ -34,27 +34,27 @@
             this.dataSet1 = new System.Data.DataSet();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pnlWeiter = new System.Windows.Forms.Panel();
             this.lblWeiter = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.eventLog1 = new System.Diagnostics.EventLog();
             this.pnlNutzer = new System.Windows.Forms.Panel();
             this.lblNutzer = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tbNutzer = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pnlWeiter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).BeginInit();
             this.pnlNutzer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -101,6 +101,21 @@
             this.panel1.TabIndex = 22;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::LaTrade.Properties.Resources.icons8_winkel_links_50;
+            this.pictureBox4.Location = new System.Drawing.Point(10, 14);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 29;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Visible = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
+            this.pictureBox4.MouseHover += new System.EventHandler(this.pictureBox4_MouseHover);
+            // 
             // pnlWeiter
             // 
             this.pnlWeiter.Controls.Add(this.lblWeiter);
@@ -128,6 +143,20 @@
             this.lblWeiter.Click += new System.EventHandler(this.lblWeiter_Click);
             this.lblWeiter.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
             this.lblWeiter.MouseHover += new System.EventHandler(this.label2_MouseHover);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::LaTrade.Properties.Resources.icons8_winkel_rechts_50;
+            this.pictureBox2.Location = new System.Drawing.Point(189, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 26;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // eventLog1
             // 
@@ -161,6 +190,20 @@
             this.lblNutzer.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
             this.lblNutzer.MouseHover += new System.EventHandler(this.label3_MouseHover);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::LaTrade.Properties.Resources.icons8_benutzer_50;
+            this.pictureBox3.Location = new System.Drawing.Point(189, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(29, 27);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 26;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
+            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
+            // 
             // tbNutzer
             // 
             this.tbNutzer.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -188,34 +231,6 @@
             this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
             this.pictureBox5.MouseHover += new System.EventHandler(this.pictureBox5_MouseHover);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::LaTrade.Properties.Resources.icons8_benutzer_50;
-            this.pictureBox3.Location = new System.Drawing.Point(189, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 26;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
-            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::LaTrade.Properties.Resources.icons8_winkel_rechts_50;
-            this.pictureBox2.Location = new System.Drawing.Point(189, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 26;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -230,21 +245,6 @@
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::LaTrade.Properties.Resources.icons8_winkel_links_50;
-            this.pictureBox4.Location = new System.Drawing.Point(10, 14);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(29, 27);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 29;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Visible = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
-            this.pictureBox4.MouseHover += new System.EventHandler(this.pictureBox4_MouseHover);
             // 
             // Login
             // 
@@ -268,16 +268,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnlWeiter.ResumeLayout(false);
             this.pnlWeiter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
             this.pnlNutzer.ResumeLayout(false);
             this.pnlNutzer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

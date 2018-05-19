@@ -15,7 +15,7 @@ using AesEncDenc;
 using System.IO;
 using IniUnit;
 
-namespace LoginForm
+namespace LaTrade
 {
 
 
