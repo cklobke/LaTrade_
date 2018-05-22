@@ -10,17 +10,15 @@ using System.Windows.Forms;
 
 namespace LaTrade
 {
-    public partial class LTForm : Form
+    public partial class Kunden : LTForm
     {
-        public LTForm()
+        public Kunden()
         {
             InitializeComponent();
         }
 
-        private void LTForm_Load(object sender, EventArgs e)
+        private void Benutzer_Load(object sender, EventArgs e)
         {
-            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#93a1ad");
-            //this.WindowState = FormWindowState.Maximized;
 
         }
     }

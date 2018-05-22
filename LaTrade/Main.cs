@@ -16,6 +16,7 @@ namespace LaTrade
         Login login;
         bool SideMenuOpen;
         string SelectedMenuPoint;
+        LTForm Selected = new LTForm();
 
         public Main(Login parent)
         {
@@ -25,15 +26,33 @@ namespace LaTrade
 
         private void Main_Load(object sender, EventArgs e)
         {
-            btnAuftraege.BackColor = System.Drawing.ColorTranslator.FromHtml("#497BB4");
-            btnKunden.BackColor = System.Drawing.ColorTranslator.FromHtml("#497BB4");
-            btnLagerstand.BackColor = System.Drawing.ColorTranslator.FromHtml("#497BB4");
-            btnLieferungen.BackColor = System.Drawing.ColorTranslator.FromHtml("#497BB4");
-            btnRechnungen.BackColor = System.Drawing.ColorTranslator.FromHtml("#497BB4");
-            pnlTopMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#536995");
-            pnlSideMenu.BackColor = System.Drawing.ColorTranslator.FromHtml("#497BB4");
-            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#93a1ad");
+            btnAuftraege.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
+            btnKunden.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
+            btnLagerstand.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
+            btnLieferungen.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
+            btnRechnungen.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
+            pnlKasse.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
+            pnlEinkauf.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
+            pnlStatistik.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
+            pnlTopMenu.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Side_Menu_Color);
+            pnlSideMenu.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
+            this.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Alt_Color);
             SideMenuOpen = true;
+
+            //Pfusch am Bau
+            //Platzhalter für das MainPanel
+            LTForm StartForm = new LTForm();
+            StartForm.MdiParent = this;
+            StartForm.Show();
+            StartForm.WindowState = FormWindowState.Maximized;
+            Selected = StartForm;
+            LTForm StartForm2 = new LTForm();
+            StartForm2.MdiParent = this;
+            StartForm2.Show();
+            StartForm2.WindowState = FormWindowState.Maximized;
+            Selected.Close();
+            StartForm2.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Back_Color);
+            Selected = StartForm2;
         }
 
 
@@ -64,11 +83,11 @@ namespace LaTrade
         {
             if (hoverOk)
             {
-                btnAuftraege.BackColor = System.Drawing.ColorTranslator.FromHtml("#41CBC7");
+                btnAuftraege.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Alt_Color);
                 pbAuftraege.Load("icons/icons8-benutzer-menü-männlich-filled-50.png");
             } else if (SelectedMenuPoint != "Auftraege")
             {
-                btnAuftraege.BackColor = System.Drawing.ColorTranslator.FromHtml("#497BB4");
+                btnAuftraege.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
                 pbAuftraege.Load("icons/icons8-benutzer-menü-männlich-50.png");
             }
 
@@ -77,12 +96,12 @@ namespace LaTrade
         {
             if (hoverOk)
             {
-                btnRechnungen.BackColor = System.Drawing.ColorTranslator.FromHtml("#41CBC7");
+                btnRechnungen.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Alt_Color);
                 pbRechnungen.Load("icons/icons8-rechnung-filled-50.png");
             }
             else if (SelectedMenuPoint != "Rechnungen")
             {
-                btnRechnungen.BackColor = System.Drawing.ColorTranslator.FromHtml("#497BB4");
+                btnRechnungen.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
                 pbRechnungen.Load("icons/icons8-rechnung-50.png");
             }
 
@@ -91,12 +110,12 @@ namespace LaTrade
         {
             if (hoverOk)
             {
-                btnLieferungen.BackColor = System.Drawing.ColorTranslator.FromHtml("#41CBC7");
+                btnLieferungen.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Alt_Color);
                 pbLieferungen.Load("icons/icons8-versendet-filled-50.png");
             }
             else if (SelectedMenuPoint != "Lieferungen")
             {
-                btnLieferungen.BackColor = System.Drawing.ColorTranslator.FromHtml("#497BB4");
+                btnLieferungen.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
                 pbLieferungen.Load("icons/icons8-versendet-50.png");
             }
 
@@ -105,12 +124,12 @@ namespace LaTrade
         {
             if (hoverOk)
             {
-                btnKunden.BackColor = System.Drawing.ColorTranslator.FromHtml("#41CBC7");
+                btnKunden.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Alt_Color);
                 pbKunden.Load("icons/icons8-benutzer-filled-50.png");
             }
             else if (SelectedMenuPoint != "Kundenstamm")
             {
-                btnKunden.BackColor = System.Drawing.ColorTranslator.FromHtml("#497BB4");
+                btnKunden.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
                 pbKunden.Load("icons/icons8-benutzer-50.png");
             }
 
@@ -119,13 +138,51 @@ namespace LaTrade
         {
             if (hoverOk)
             {
-                btnLagerstand.BackColor = System.Drawing.ColorTranslator.FromHtml("#41CBC7");
+                btnLagerstand.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Alt_Color);
                 pbLagerstand.Load("icons/icons8-lagerhaus-filled-50.png");
             }
             else if (SelectedMenuPoint != "Lagerstand")
             {
-                btnLagerstand.BackColor = System.Drawing.ColorTranslator.FromHtml("#497BB4");
+                btnLagerstand.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
                 pbLagerstand.Load("icons/icons8-lagerhaus-50.png");
+            }
+
+        }
+        private void HoverEinkauf(bool hoverOk) {
+            if (hoverOk) {
+                pbEinkauf.Load("icons/icons8-kaufen-filled-50.png");
+                pnlEinkauf.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Alt_Color);
+            } else if (SelectedMenuPoint != "Einkauf"){
+                pbEinkauf.Load("icons/icons8-kaufen-50.png");
+                pnlEinkauf.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
+            }
+            
+        }
+        private void HoverStatistik(bool hoverOk)
+        {
+            if (hoverOk)
+            {
+                pbStatistik.Load("icons/icons8-positive-dynamik-filled-50.png");
+                pnlStatistik.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Alt_Color);
+            }
+            else if (SelectedMenuPoint != "Statistik")
+            {
+                pbStatistik.Load("icons/icons8-positive-dynamik-50.png");
+                pnlStatistik.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
+            }
+
+        }
+        private void HoverKasse(bool hoverOk)
+        {
+            if (hoverOk)
+            {
+                pbKasse.Load("icons/icons8-kasse-filled-50.png");
+                pnlKasse.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Alt_Color);
+            }
+            else if (SelectedMenuPoint != "Kasse")
+            {
+                pbKasse.Load("icons/icons8-kasse-50.png");
+                pnlKasse.BackColor = System.Drawing.ColorTranslator.FromHtml(login.Btn_Color);
             }
 
         }
@@ -306,8 +363,10 @@ namespace LaTrade
         private void lblAuftraege_Click(object sender, EventArgs e)
         {
             Auftraege frmAU = new Auftraege();
-            frmAU.MdiParent = panel2.MdiForm;
+            frmAU.MdiParent = this;
             frmAU.Show();
+
+            Selected.Close();
 
             if (SelectedMenuPoint != "Auftraege")
             {
@@ -322,6 +381,12 @@ namespace LaTrade
 
         private void lblRechnungen_Click(object sender, EventArgs e)
         {
+            Rechnungen rechnungen = new Rechnungen();
+            rechnungen.MdiParent = this;
+            rechnungen.Show();
+
+            Selected.Close();
+
             if (SelectedMenuPoint != "Rechnungen")
             {
                 HoverRechnungen(true);
@@ -336,6 +401,12 @@ namespace LaTrade
 
         private void lblKundenstamm_Click(object sender, EventArgs e)
         {
+            Kunden kunden = new Kunden();
+            kunden.MdiParent = this;
+            kunden.Show();
+
+            Selected.Close();
+
             if (SelectedMenuPoint != "Kundenstamm")
             {
                 HoverKunden(true);
@@ -383,12 +454,18 @@ namespace LaTrade
                 HoverLieferungen(false);
                 HoverRechnungen(false);
                 HoverKunden(false);
+                HoverStatistik(false);
+                HoverEinkauf(false);
+                HoverKasse(false);
             }
             else if (SelectedMenuPoint == "Rechnungen") {
                 HoverAuftraege(false);
                 HoverLieferungen(false);
                 HoverLagerbestand(false);
                 HoverKunden(false);
+                HoverStatistik(false);
+                HoverEinkauf(false);
+                HoverKasse(false);
             }
             else if (SelectedMenuPoint == "Lieferungen")
             {
@@ -396,6 +473,9 @@ namespace LaTrade
                 HoverRechnungen(false);
                 HoverLagerbestand(false);
                 HoverKunden(false);
+                HoverStatistik(false);
+                HoverEinkauf(false);
+                HoverKasse(false);
             }
             else if (SelectedMenuPoint == "Auftraege")
             {
@@ -403,6 +483,9 @@ namespace LaTrade
                 HoverLieferungen(false);
                 HoverLagerbestand(false);
                 HoverKunden(false);
+                HoverStatistik(false);
+                HoverEinkauf(false);
+                HoverKasse(false);
             }
             else if (SelectedMenuPoint == "Kundenstamm")
             {
@@ -410,6 +493,39 @@ namespace LaTrade
                 HoverLieferungen(false);
                 HoverLagerbestand(false);
                 HoverRechnungen(false);
+                HoverStatistik(false);
+                HoverEinkauf(false);
+                HoverKasse(false);
+            }
+            else if (SelectedMenuPoint == "Einkauf")
+            {
+                HoverAuftraege(false);
+                HoverLieferungen(false);
+                HoverLagerbestand(false);
+                HoverRechnungen(false);
+                HoverStatistik(false);
+                HoverKunden(false);
+                HoverKasse(false);
+            }
+            else if (SelectedMenuPoint == "Statistik")
+            {
+                HoverAuftraege(false);
+                HoverLieferungen(false);
+                HoverLagerbestand(false);
+                HoverRechnungen(false);
+                HoverEinkauf(false);
+                HoverKunden(false);
+                HoverKasse(false);
+            }
+            else if (SelectedMenuPoint == "Kasse")
+            {
+                HoverAuftraege(false);
+                HoverLieferungen(false);
+                HoverLagerbestand(false);
+                HoverRechnungen(false);
+                HoverEinkauf(false);
+                HoverKunden(false);
+                HoverStatistik(false);
             }
         }
         private void btnLagerstand_Paint(object sender, PaintEventArgs e)
@@ -456,30 +572,76 @@ namespace LaTrade
         {
             pbSettings.Load("icons/icons8-einstellungen-50.png");
         }
-    }
 
-    public class MdiClientPanel : Panel
-    {
-        private Form mdiForm;
-        private MdiClient ctlClient = new MdiClient();
-
-        public MdiClientPanel()
+        private void lblEinkauf_MouseHover(object sender, EventArgs e)
         {
-            base.Controls.Add(this.ctlClient);
+            HoverEinkauf(true);
         }
 
-        public Form MdiForm
+        private void lblEinkauf_MouseLeave(object sender, EventArgs e)
         {
-            get
+            HoverEinkauf(false);
+        }
+
+        private void lblStatistik_MouseHover(object sender, EventArgs e)
+        {
+            HoverStatistik(true);
+        }
+
+        private void lblStatistik_MouseLeave(object sender, EventArgs e)
+        {
+            HoverStatistik(false);
+        }
+
+        private void lblKasse_MouseHover(object sender, EventArgs e)
+        {
+            HoverKasse(true);
+        }
+
+        private void lblKasse_MouseLeave(object sender, EventArgs e)
+        {
+            HoverKasse(false);
+        }
+
+        private void lblEinkauf_Click(object sender, EventArgs e)
+        {
+            if (SelectedMenuPoint != "Einkauf")
             {
-                if (this.mdiForm == null)
-                {
-                    this.mdiForm = new Form();
-                    /// set the hidden ctlClient field which is used to determine if the form is an MDI form
-                    System.Reflection.FieldInfo field = typeof(Form).GetField("ctlClient", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-                    field.SetValue(this.mdiForm, this.ctlClient);
-                }
-                return this.mdiForm;
+                HoverEinkauf(true);
+                SelectedMenuPoint = "Einkauf";
+                ResetBtnColors();
+            }
+            else
+            {
+                HoverEinkauf(false);
+            }
+        }
+
+        private void lblStatistik_Click(object sender, EventArgs e)
+        {
+            if (SelectedMenuPoint != "Statistik")
+            {
+                HoverStatistik(true);
+                SelectedMenuPoint = "Statistik";
+                ResetBtnColors();
+            }
+            else
+            {
+                HoverStatistik(false);
+            }
+        }
+
+        private void lblKasse_Click(object sender, EventArgs e)
+        {
+            if (SelectedMenuPoint != "Kasse")
+            {
+                HoverKasse(true);
+                SelectedMenuPoint = "Kasse";
+                ResetBtnColors();
+            }
+            else
+            {
+                HoverKasse(false);
             }
         }
     }

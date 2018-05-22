@@ -26,6 +26,11 @@ namespace LaTrade
         int LoginStep;
         bool savedPasswort;
         IniFile LoginIni;
+        public string Top_Color;
+        public string Back_Color;
+        public string Btn_Color;
+        public string Btn_Alt_Color;
+        public string Side_Menu_Color;
 
 
         public Login()
@@ -60,6 +65,74 @@ namespace LaTrade
             reader.Close();
 
             return UserPasswort;
+        }
+
+        private void GetColors()
+        {
+            dbconnection = new MySqlConnection("Server=192.168.178.59;Port=3306;" +
+           "Database=LaTrade; UID = LaTrade; Password =LaTrad3;SslMode=none ");
+
+            dbconnection.Open();
+
+            string query_top = "select COLOR_VALUE as COLOR from COLORS where COLOR_NAME = 'Main_Top'";
+            string query_back = "select COLOR_VALUE as COLOR from COLORS where COLOR_NAME = 'Background'";
+            string query_btn = "select COLOR_VALUE as COLOR from COLORS where COLOR_NAME = 'Alternative'";
+            string query_btn_alt = "select COLOR_VALUE as COLOR from COLORS where COLOR_NAME = 'Front_Color'";
+            string query_side_menu = "select COLOR_VALUE as COLOR from COLORS where COLOR_NAME = 'Side_Menu'";
+
+            MySqlCommand command_top = new MySqlCommand(query_top, dbconnection);
+            MySqlCommand command_back = new MySqlCommand(query_back, dbconnection);
+            MySqlCommand command_btn = new MySqlCommand(query_btn, dbconnection);
+            MySqlCommand command_btn_alt = new MySqlCommand(query_btn_alt, dbconnection);
+            MySqlCommand command_side_menu = new MySqlCommand(query_side_menu, dbconnection);
+
+            command_top.ExecuteNonQuery();
+            command_back.ExecuteNonQuery();
+            command_btn.ExecuteNonQuery();
+            command_btn_alt.ExecuteNonQuery();
+            command_side_menu.ExecuteNonQuery();
+
+            MySqlDataReader reader_top = command_top.ExecuteReader();
+            while (reader_top.Read())
+            {
+                Top_Color = "#"+ reader_top.GetString("COLOR");// GetString("USER_VORNAME") + ' ' + reader.GetString("USER_NACHNAME")
+            }
+            reader_top.Close();
+
+            MySqlDataReader reader_back = command_back.ExecuteReader();
+            while (reader_back.Read())
+            {
+                Back_Color = "#" + reader_back.GetString("COLOR");// GetString("USER_VORNAME") + ' ' + reader.GetString("USER_NACHNAME")
+            }
+            reader_back.Close();
+
+            MySqlDataReader reader_btn = command_btn.ExecuteReader();
+            while (reader_btn.Read())
+            {
+                Btn_Color = "#" + reader_btn.GetString("COLOR");// GetString("USER_VORNAME") + ' ' + reader.GetString("USER_NACHNAME")
+            }
+            reader_btn.Close();
+
+            MySqlDataReader reader_btn_alt = command_btn_alt.ExecuteReader();
+            while (reader_btn_alt.Read())
+            {
+                Btn_Alt_Color = "#" + reader_btn_alt.GetString("COLOR");// GetString("USER_VORNAME") + ' ' + reader.GetString("USER_NACHNAME")
+            }
+            reader_btn_alt.Close();
+
+            MySqlDataReader reader_side_menu = command_side_menu.ExecuteReader();
+            while (reader_side_menu.Read())
+            {
+                Side_Menu_Color = "#" + reader_side_menu.GetString("COLOR");// GetString("USER_VORNAME") + ' ' + reader.GetString("USER_NACHNAME")
+            }
+            reader_side_menu.Close();
+
+            panel1.BackColor = System.Drawing.ColorTranslator.FromHtml(Btn_Color);
+            this.BackColor = System.Drawing.ColorTranslator.FromHtml(Back_Color);
+            pnlWeiter.BackColor = System.Drawing.ColorTranslator.FromHtml(Btn_Color);
+            pnlNutzer.BackColor = System.Drawing.ColorTranslator.FromHtml(Btn_Color);
+            tbNutzer.BackColor = System.Drawing.ColorTranslator.FromHtml(Btn_Color);
+            tbPasswort.BackColor = System.Drawing.ColorTranslator.FromHtml(Btn_Color);
         }
 
         private bool CheckUserName()
@@ -130,11 +203,8 @@ namespace LaTrade
         {
             RefreshData();
             LoginStep = 1;
-            pnlWeiter.BackColor = System.Drawing.ColorTranslator.FromHtml("#4EA5D2");
-            pnlNutzer.BackColor = System.Drawing.ColorTranslator.FromHtml("#4EA5D2");
-            tbNutzer.BackColor = System.Drawing.ColorTranslator.FromHtml("#4d80d1");
-            tbPasswort.BackColor = System.Drawing.ColorTranslator.FromHtml("#4d80d1");
-            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#497BB4");
+
+            GetColors();
 
             LoginIni = new IniFile("Login.ini");
             savedPasswort = (LoginIni.Read("Passwort").Length > 0);
@@ -176,7 +246,7 @@ namespace LaTrade
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            panel1.BackColor = System.Drawing.ColorTranslator.FromHtml("#536995");
+            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -250,11 +320,11 @@ namespace LaTrade
 
         private void ButtonWeiterHover() {
             pictureBox2.Load("icons/icons8-winkel-rechts-filled-50.png");
-            pnlWeiter.BackColor = System.Drawing.ColorTranslator.FromHtml("#41CBC7");
+            pnlWeiter.BackColor = System.Drawing.ColorTranslator.FromHtml(Btn_Alt_Color);
         }
         private void ButtonBenutzerHover() {
             pictureBox3.Load("icons/icons8-benutzer-filled-50.png");
-            pnlNutzer.BackColor = System.Drawing.ColorTranslator.FromHtml("#41CBC7");
+            pnlNutzer.BackColor = System.Drawing.ColorTranslator.FromHtml(Btn_Alt_Color);
         }
         private void ShowPasswortHover(){
             pictureBox1.Load("icons/icons8-sichtbar-filled-50.png");
@@ -265,12 +335,12 @@ namespace LaTrade
         private void ButtonWeiterLeave()
         {
             pictureBox2.Load("icons/icons8-winkel-rechts-50.png");
-            pnlWeiter.BackColor = System.Drawing.ColorTranslator.FromHtml("#4EA5D2");
+            pnlWeiter.BackColor = System.Drawing.ColorTranslator.FromHtml(Btn_Color);
         }
         private void ButtonBenutzerLeave()
         {
             pictureBox3.Load("icons/icons8-benutzer-50.png");
-            pnlNutzer.BackColor = System.Drawing.ColorTranslator.FromHtml("#4EA5D2");
+            pnlNutzer.BackColor = System.Drawing.ColorTranslator.FromHtml(Btn_Color);
         }
         private void ShowPasswortLeave()
         {

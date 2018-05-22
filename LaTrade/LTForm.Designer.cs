@@ -41,6 +41,7 @@
             this.Name = "LTForm";
             this.ShowInTaskbar = false;
             this.Text = "LTForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.LTForm_Load);
             this.ResumeLayout(false);
 
