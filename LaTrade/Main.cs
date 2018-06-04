@@ -17,11 +17,22 @@ namespace LaTrade
         bool SideMenuOpen;
         string SelectedMenuPoint;
         LTForm Selected = new LTForm();
+        public string Top_Color;
+        public string Back_Color;
+        public string Btn_Color;
+        public string Btn_Alt_Color;
+        public string Side_Menu_Color;
 
         public Main(Login parent)
         {
             login = parent;
             InitializeComponent();
+
+            Top_Color = login.Top_Color;
+            Back_Color = login.Back_Color;
+            Btn_Color = login.Btn_Color;
+            Btn_Alt_Color = login.Btn_Alt_Color;
+            Side_Menu_Color = login.Side_Menu_Color;
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -362,14 +373,14 @@ namespace LaTrade
 
         private void lblAuftraege_Click(object sender, EventArgs e)
         {
-            Auftraege frmAU = new Auftraege();
-            frmAU.MdiParent = this;
-            frmAU.Show();
-
-            Selected.Close();
-
             if (SelectedMenuPoint != "Auftraege")
             {
+                Auftraege frmAU = new Auftraege(this);
+                frmAU.MdiParent = this;
+                frmAU.Show();
+
+                Selected.Close();
+
                 HoverAuftraege(true);
                 SelectedMenuPoint = "Auftraege";
                 ResetBtnColors();
@@ -381,17 +392,17 @@ namespace LaTrade
 
         private void lblRechnungen_Click(object sender, EventArgs e)
         {
-            Rechnungen rechnungen = new Rechnungen();
-            rechnungen.MdiParent = this;
-            rechnungen.Show();
-
-            Selected.Close();
-
             if (SelectedMenuPoint != "Rechnungen")
             {
                 HoverRechnungen(true);
                 SelectedMenuPoint = "Rechnungen";
                 ResetBtnColors();
+
+                Rechnungen rechnungen = new Rechnungen();
+                rechnungen.MdiParent = this;
+                rechnungen.Show();
+
+                Selected.Close();
             }
             else
             {
@@ -401,17 +412,16 @@ namespace LaTrade
 
         private void lblKundenstamm_Click(object sender, EventArgs e)
         {
-            Kunden kunden = new Kunden();
-            kunden.MdiParent = this;
-            kunden.Show();
-
-            Selected.Close();
-
             if (SelectedMenuPoint != "Kundenstamm")
             {
                 HoverKunden(true);
                 SelectedMenuPoint = "Kundenstamm";
                 ResetBtnColors();
+                Kunden kunden = new Kunden();
+                kunden.MdiParent = this;
+                kunden.Show();
+
+                Selected.Close();
             }
             else
             {

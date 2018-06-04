@@ -36,34 +36,38 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridAu = new System.Windows.Forms.DataGridView();
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.pbCancel = new System.Windows.Forms.PictureBox();
             this.pbSearch = new System.Windows.Forms.PictureBox();
+            this.tbSearch = new System.Windows.Forms.TextBox();
             this.pbSave = new System.Windows.Forms.PictureBox();
             this.pbDelete = new System.Windows.Forms.PictureBox();
             this.pbEdit = new System.Windows.Forms.PictureBox();
             this.pbNew = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.AU_NR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KD_FIRMA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KD_ADRESSE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KD_GEBURTSTAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AU_KD_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AU_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AU_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KD_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AU_KD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AU_KD_NR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vorname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nachname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KD_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KD_NR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KD_WOHNORT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AU_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AU_NETTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AU_BRUTTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AU_PLZ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridAu)).BeginInit();
             this.pnlTop.SuspendLayout();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNew)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridAu
@@ -90,14 +94,16 @@
             this.gridAu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridAu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AU_NR,
+            this.KD_FIRMA,
+            this.KD_ADRESSE,
+            this.KD_GEBURTSTAG,
             this.AU_KD_ID,
             this.AU_TYPE,
             this.AU_ID,
             this.KD_ID,
-            this.AU_KD,
-            this.AU_KD_NR,
-            this.Vorname,
-            this.Nachname,
+            this.KD_NAME,
+            this.KD_NR,
+            this.KD_WOHNORT,
             this.AU_DATE,
             this.AU_NETTO,
             this.AU_BRUTTO,
@@ -119,11 +125,11 @@
             this.gridAu.RowHeadersVisible = false;
             this.gridAu.Size = new System.Drawing.Size(1383, 465);
             this.gridAu.TabIndex = 0;
-            this.gridAu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.gridAu.SelectionChanged += new System.EventHandler(this.gridAu_SelectionChanged);
             // 
             // pnlTop
             // 
+            this.pnlTop.Controls.Add(this.pbCancel);
             this.pnlTop.Controls.Add(this.pbSearch);
             this.pnlTop.Controls.Add(this.tbSearch);
             this.pnlTop.Controls.Add(this.pbSave);
@@ -135,26 +141,20 @@
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(1383, 95);
             this.pnlTop.TabIndex = 1;
-            this.pnlTop.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTop_Paint);
             // 
-            // panel1
+            // pbCancel
             // 
-            this.panel1.Controls.Add(this.gridAu);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 95);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1383, 465);
-            this.panel1.TabIndex = 2;
-            // 
-            // tbSearch
-            // 
-            this.tbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbSearch.Font = new System.Drawing.Font("Bahnschrift Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSearch.ForeColor = System.Drawing.Color.White;
-            this.tbSearch.Location = new System.Drawing.Point(1171, 29);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(184, 32);
-            this.tbSearch.TabIndex = 9;
+            this.pbCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbCancel.Image = global::LaTrade.Properties.Resources.icons8_löschen_50;
+            this.pbCancel.Location = new System.Drawing.Point(414, 21);
+            this.pbCancel.Name = "pbCancel";
+            this.pbCancel.Size = new System.Drawing.Size(50, 49);
+            this.pbCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCancel.TabIndex = 11;
+            this.pbCancel.TabStop = false;
+            this.pbCancel.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbCancel.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pbCancel.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
             // pbSearch
             // 
@@ -170,6 +170,17 @@
             this.pbSearch.Click += new System.EventHandler(this.pbSearch_Click);
             this.pbSearch.MouseLeave += new System.EventHandler(this.pbSearch_MouseLeave);
             this.pbSearch.MouseHover += new System.EventHandler(this.pbSearch_MouseHover);
+            // 
+            // tbSearch
+            // 
+            this.tbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbSearch.Font = new System.Drawing.Font("Bahnschrift Light", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSearch.ForeColor = System.Drawing.Color.White;
+            this.tbSearch.Location = new System.Drawing.Point(1171, 29);
+            this.tbSearch.Name = "tbSearch";
+            this.tbSearch.Size = new System.Drawing.Size(184, 32);
+            this.tbSearch.TabIndex = 9;
+            this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
             // 
             // pbSave
             // 
@@ -227,12 +238,45 @@
             this.pbNew.MouseLeave += new System.EventHandler(this.pbNew_MouseLeave);
             this.pbNew.MouseHover += new System.EventHandler(this.pbAuftraege_MouseHover);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.gridAu);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 95);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1383, 465);
+            this.panel1.TabIndex = 2;
+            // 
             // AU_NR
             // 
             this.AU_NR.DataPropertyName = "AU_NR";
             this.AU_NR.HeaderText = "Auftrags-Nr.";
             this.AU_NR.Name = "AU_NR";
             this.AU_NR.ReadOnly = true;
+            // 
+            // KD_FIRMA
+            // 
+            this.KD_FIRMA.DataPropertyName = "KD_FIRMA";
+            this.KD_FIRMA.HeaderText = "Firma";
+            this.KD_FIRMA.Name = "KD_FIRMA";
+            this.KD_FIRMA.ReadOnly = true;
+            this.KD_FIRMA.Visible = false;
+            // 
+            // KD_ADRESSE
+            // 
+            this.KD_ADRESSE.DataPropertyName = "KD_ADRESSE";
+            this.KD_ADRESSE.HeaderText = "KD_ADRESSE";
+            this.KD_ADRESSE.Name = "KD_ADRESSE";
+            this.KD_ADRESSE.ReadOnly = true;
+            this.KD_ADRESSE.Visible = false;
+            // 
+            // KD_GEBURTSTAG
+            // 
+            this.KD_GEBURTSTAG.DataPropertyName = "KD_GEBURTSDATUM";
+            this.KD_GEBURTSTAG.HeaderText = "KD_GEBURTSTAG";
+            this.KD_GEBURTSTAG.Name = "KD_GEBURTSTAG";
+            this.KD_GEBURTSTAG.ReadOnly = true;
+            this.KD_GEBURTSTAG.Visible = false;
             // 
             // AU_KD_ID
             // 
@@ -266,33 +310,27 @@
             this.KD_ID.ReadOnly = true;
             this.KD_ID.Visible = false;
             // 
-            // AU_KD
+            // KD_NAME
             // 
-            this.AU_KD.DataPropertyName = "KD_FIRMA";
-            this.AU_KD.HeaderText = "Kunde";
-            this.AU_KD.Name = "AU_KD";
-            this.AU_KD.ReadOnly = true;
+            this.KD_NAME.DataPropertyName = "KD_NAME";
+            this.KD_NAME.HeaderText = "Kunde";
+            this.KD_NAME.Name = "KD_NAME";
+            this.KD_NAME.ReadOnly = true;
+            this.KD_NAME.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // AU_KD_NR
+            // KD_NR
             // 
-            this.AU_KD_NR.DataPropertyName = "KD_NR";
-            this.AU_KD_NR.HeaderText = "Kunden-Nr.";
-            this.AU_KD_NR.Name = "AU_KD_NR";
-            this.AU_KD_NR.ReadOnly = true;
+            this.KD_NR.DataPropertyName = "KD_NR";
+            this.KD_NR.HeaderText = "Kunden-Nr.";
+            this.KD_NR.Name = "KD_NR";
+            this.KD_NR.ReadOnly = true;
             // 
-            // Vorname
+            // KD_WOHNORT
             // 
-            this.Vorname.DataPropertyName = "KD_VORNAME";
-            this.Vorname.HeaderText = "Vorname";
-            this.Vorname.Name = "Vorname";
-            this.Vorname.ReadOnly = true;
-            // 
-            // Nachname
-            // 
-            this.Nachname.DataPropertyName = "KD_NACHNAME";
-            this.Nachname.HeaderText = "Nachname";
-            this.Nachname.Name = "Nachname";
-            this.Nachname.ReadOnly = true;
+            this.KD_WOHNORT.DataPropertyName = "KD_WOHNORT";
+            this.KD_WOHNORT.HeaderText = "Ort";
+            this.KD_WOHNORT.Name = "KD_WOHNORT";
+            this.KD_WOHNORT.ReadOnly = true;
             // 
             // AU_DATE
             // 
@@ -347,12 +385,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridAu)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNew)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -368,15 +407,18 @@
         private System.Windows.Forms.PictureBox pbSave;
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.PictureBox pbSearch;
+        private System.Windows.Forms.PictureBox pbCancel;
         private System.Windows.Forms.DataGridViewTextBoxColumn AU_NR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KD_FIRMA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KD_ADRESSE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KD_GEBURTSTAG;
         private System.Windows.Forms.DataGridViewTextBoxColumn AU_KD_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn AU_TYPE;
         private System.Windows.Forms.DataGridViewTextBoxColumn AU_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn KD_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AU_KD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AU_KD_NR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vorname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nachname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KD_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KD_NR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KD_WOHNORT;
         private System.Windows.Forms.DataGridViewTextBoxColumn AU_DATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn AU_NETTO;
         private System.Windows.Forms.DataGridViewTextBoxColumn AU_BRUTTO;

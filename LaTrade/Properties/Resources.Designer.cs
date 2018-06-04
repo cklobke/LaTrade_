@@ -273,6 +273,16 @@ namespace LaTrade.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icons8_löschen_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-löschen-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icons8_menü_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-menü-50", resourceCulture);

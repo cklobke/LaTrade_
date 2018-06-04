@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="icons8-versendet-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Icons\icons8-versendet-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-hinzufügen-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\icons8-hinzufügen-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,6 +138,9 @@
   </data>
   <data name="icons8-versendet-filled-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\icons8-versendet-filled-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-kaufen-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Icons\icons8-kaufen-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-lagerhaus-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\icons8-lagerhaus-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,9 +163,6 @@
   <data name="icons8-positive-dynamik-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\icons8-positive-dynamik-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-sichtbar-filled-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Icons\icons8-sichtbar-filled-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8-liste-filled-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\icons8-liste-filled-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,9 +181,6 @@
   <data name="icons8-kasse-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\icons8-kasse-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-rechnung-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Icons\icons8-rechnung-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8-liste-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\icons8-liste-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,8 +196,8 @@
   <data name="icons8-sperren-2-filled-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\icons8-sperren-2-filled-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-kaufen-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Icons\icons8-kaufen-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-sichtbar-filled-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Icons\icons8-sichtbar-filled-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-benutzer-filled-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\icons8-benutzer-filled-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,14 +214,17 @@
   <data name="icon_lang" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\icon_lang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-versendet-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Icons\icons8-versendet-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-rechnung-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Icons\icons8-rechnung-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-bearbeiten-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\icons8-bearbeiten-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-drucken-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\icons8-drucken-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-suche-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Icons\icons8-suche-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-lagerhaus-filled-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\icons8-lagerhaus-filled-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,7 +247,7 @@
   <data name="icons8-sperren-2-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Icons\icons8-sperren-2-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-suche-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\Icons\icons8-suche-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-löschen-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Icons\icons8-löschen-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

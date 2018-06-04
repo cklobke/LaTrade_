@@ -32,7 +32,6 @@ namespace LaTrade
         public string Btn_Alt_Color;
         public string Side_Menu_Color;
 
-
         public Login()
         {
             InitializeComponent();
@@ -437,6 +436,8 @@ namespace LaTrade
             if (e.KeyCode == Keys.Enter)
             {
                 WeiterClick();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
         }
     
@@ -468,6 +469,8 @@ namespace LaTrade
             if (e.KeyCode == Keys.Enter)
             {
                 DoLogin();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
         }
 
